@@ -1,0 +1,43 @@
+Development Issue Tracker for Lighthouse Unofficial
+
+
+Quick fixes:
+- print success message when account is created successfully
+- salt passwords for new accounts
+- fix link size for logon pages
+- reformat the bartender screen (front end)
+- add validation to add drink input
+- quotes function where applicable
+- standardize all of the fonts
+- capitalize category names in menu
+- fix single drink titles layout. see candy cane martini for example
+
+Ideas:
+- menu interface for std users, can go to about page or drink menu or personal order history, etc
+- 'view my orders' page for standard users
+- use a timesOrdered column in Drinks Table if data processing from Orders is too obnoxious
+- give users a different way out of access denied page other than login screen. maybe
+- Data analytics page
+- universal speakeasy password
+- proprieter recommendations
+
+Desired features:
+- limited attempts on login
+- about page: history and aim of bar, employee bios, rules etc.
+- timestamp for order
+- mobile design
+
+Issues:
+- back button to login page doesnt display logged out message
+	- will see how big of an issue this is when i try to use JS
+	  to prevent users from viewing restricted pages
+* possible solution - hidden form with value + JS
+- I want to reload the page on back buttons
+- might need to make the drinks database take larger values for description and ingredients
+- users drinkCount variable and their actual amount of orders in the database are unrelated. the programming is correct but this is sketchy
+- users can sort of hop around with the back and forward button. they cant really do anything but they can cause some errors
+- drink count doesnt update well. will probably have to use more php, maybe get rid of the session variable
+- bartender page populates eve and dns wrong - quoted drinks
+
+Major To Dos:
+- finish the 'refresh on back button' functionality -> this could be really bad if page load is slow

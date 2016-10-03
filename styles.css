@@ -1,0 +1,297 @@
+/*
+
+Current color scheme:
+
+Main color - light blue - rgb(179, 209, 255)
+Main font color - dark brown - rgb(77,40,0)
+
+
+Might be a good idea to make standard settings, and then make everything that
+is actually used, its own class.
+
+*/
+
+
+/*  primary pages */
+
+body {
+	background-color:rgb(179, 209, 255); 			/* main color */
+	font-family: 'Goudy Old Style', sans-serif;
+}
+
+p {
+	font-family: 'Goudy Old Style', sans-serif;
+	font-weight: bold;
+	font-size:15px;
+	color: rgb(77, 40, 0);
+	margin: 5px;
+	text-align: center;
+}
+
+div.sessionMessage {
+	font-size: 22px;
+	color: rgb(77,40,0);
+	font-weight: bold;
+}
+
+/* login + create account page */
+
+body.logon {
+	background-color: rgb(63, 39, 13);
+}
+
+div.logon {
+	font-family:sans-serif;
+	font-size: 30px;
+	color: white;
+	text-align: center;
+	padding: 50px;
+	margin-bottom: 50px;
+}
+
+input[type=text], input[type=password] {
+	height: 25px;
+	border-radius: 7px;
+	font-size: 18px;
+	margin: 5px;
+}
+
+input[type=submit] {
+	background-color: rgb(77,40,0);
+	border-color: white;
+	color: white;
+	cursor: pointer;
+	border-radius: 5px;
+	font-variant: small-caps;
+	margin-bottom: 20px;
+	margin-top: 10px;
+}
+
+form {
+	font-family:sans-serif;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}
+
+p.logon {
+	font-family:sans-serif;
+	font-size: 15px;
+	color: white;
+	padding: 0px;
+	margin: 0px;
+	font-weight: normal;
+	text-align: center;
+	text-decoration: underline;
+	display: inline-block;
+}
+
+div.center {
+	text-align: center;
+}
+
+div.errorText {
+	font-size: 15px;
+	color: white;
+}
+
+a.logon {
+	text-decoration: underline;
+	color: white;
+}
+
+p.disclaimer {
+	color: white;
+	text-align: center;
+}
+
+/* main menu page */
+
+h1 {
+	font-family: sans-serif,'Goudy Old Style';
+	font-weight: bolder;
+	font-size:40px;
+	/*font-style: italic;*/
+	color: rgb(77, 40, 0);
+}
+
+h2.category {
+	font-family: sans-serif;
+	font-size: 25px;
+	text-align: left;
+	font-style: normal;
+	color: rgb(77,40,0);
+	margin: 5px;
+	margin-top: 20px;
+	margin-bottom: 0px;
+	font-weight: normal;
+}
+
+img.mainMenu {
+	float:left;
+	width:42px;
+	height:42px;
+	padding:4px 4px 4px 4px;
+	vertical-align: middle;
+	border-radius: 10px;
+}
+
+div.mainMenuDiv {
+	background-color: white;
+	border-style: solid;
+	border-color: rgb(77, 40, 0);
+	border-radius: 10px;
+    height: 50px;
+    width: 400px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+p.mainMenu {
+	font-family: 'Goudy Old Style', sans-serif;
+	font-weight: bold;
+	font-size:20px;
+	color: rgb(77, 40, 0);
+	margin: 15px;
+	padding-left: 50px;
+}
+
+a {
+	text-decoration: none;
+}
+
+div.logout, div.reloadMenu {
+	margin: 5px;
+	font-size: 17px;
+	color: rgb(77, 40, 0);
+	border-style: solid;
+	border-color: rgb(77, 40, 0);
+	border-radius: 5px;
+	display: inline-block;
+	padding: 1px 4px 1px 4px;
+	border-width: 2px;
+	margin-top: 13px;
+	text-decoration: none;
+}
+
+/* single drink page */
+
+h2.oneDrink {
+	font-family: 'Goudy Old Style', sans-serif;
+	font-weight: bolder;
+	font-size:60px;
+	font-style: italic;
+	color: rgb(77, 40, 0);
+	width: 250px;
+	height: 150;
+	padding: 0px 0px 0px 0px;
+	/*margin-left: 20px;*/
+	text-align: center;
+	display: inline-block;
+	/*background-color:rgb(200, 200, 200);*/
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+p.description {
+	font-family: 'Goudy Old Style', sans-serif;
+	font-weight: bold;
+	font-size:20px;
+	color: rgb(77, 40, 0);
+	text-align: left;
+	padding-left: 10px;
+	margin: 20px 0px 30px 0px;
+	width: 440px;
+}
+
+img.oneDrink{
+	float:left;
+	width:150px;
+	height:150px;
+	padding:10px 10px 10px 10px;
+	border-radius: 20px;
+}
+
+ul {
+	font-family: 'Goudy Old Style', sans-serif;
+	font-weight: normal;
+	font-size:17px;
+	color: rgb(77, 40, 0);
+}
+
+h3 {
+	font-family: 'Goudy Old Style', sans-serif;
+	font-weight: bold;
+	font-size:20px;
+	color: rgb(77, 40, 0);
+	text-align: left;
+	padding-left: 10px;
+	margin-top: 20px;
+}
+
+div.reloadMenu {
+	text-decoration: underline;
+	padding:10px 10px 10px 10px;
+}
+
+a.reloadMenu {
+	display: block;
+	width: 153px;
+}
+
+	/* admin pages */
+
+h1.admin {
+	font-family: sans-serif;
+	font-weight: bolder;
+	font-size:30px;
+	font-style: normal;
+	color: rgb(77, 40, 0);
+	text-align: left;
+	margin-bottom: 40px;
+}
+
+div.admin {
+	color: rgb(77,40,0);
+	font-size: 20px;
+	padding:10px 10px 10px 10px;
+	border-color: rgb(77,40,0);
+	border-style: solid;
+	border-radius: 5px;
+	text-align: center;
+	vertical-align: middle;
+	width: 190px;
+	cursor: pointer;
+}
+
+/* bartender screen */
+
+div.firstDrinkUp {
+	background-color: white;
+	border-style: solid;
+	border-color: rgb(77, 40, 0);
+	border-radius: 10px;
+    height: auto;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p.bartender {
+	font-family: sans-serif;
+	font-weight: normal;
+	font-size:15px;
+	color: rgb(77, 40, 0);
+	margin: 15px;
+	padding-left: 0px;
+}
+
+/* manage drink menu page */
+
+form.manageMenu {
+	color: rgb(77,40,0);
+}

@@ -1,0 +1,41 @@
+// ajax code, replaced by jquery "post" call
+
+		$.ajax({
+			type 		: 'POST', // define the type of HTTP verb we want to use (POST for our form)
+			url 		: 'createAccountForm.php', // the url where we want to POST
+			data 		: formData, // our data object
+			dataType 	: 'json', // what type of data do we expect back from the server
+			encode 		: true
+		})
+			// using the done promise callback
+			.done(function(result) {
+
+				// here we will handle errors and validation messages
+				if ( ! result.success)
+				{
+		        	if (result.errors.username)
+		        	{
+		        		// there was a username problem
+		        		$("#user").append("<div class='errorText'>" + result.errors.username + "</div>");
+		        	}
+
+		        	if (result.errors.password)
+		        	{
+		        		// there was a problem with the password
+		        		$("#pass").append("<div class='errorText'>" + result.errors.password + "</div>");
+		        	}
+
+		        	if (result.errors.confirm)
+		        	{
+		        		// passwords did not match
+		        		$("#confirm").append("<div class='errorText'>" + result.errors.confirm + "</div>");
+		        	}					
+				}
+				else
+				{
+					// I would like to print a confirmation message when account is created, skipping for now
+		        	
+		        	window.location = "index.html";
+					$("#knock").append("<div class='form-group'>" + result.message + "</div>");
+				}
+			})

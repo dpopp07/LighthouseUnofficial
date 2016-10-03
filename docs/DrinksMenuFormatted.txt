@@ -1,0 +1,16 @@
+Drink Menu (LighthouseDB 'Drinks' Format):
+
+drinkName
+description
+picture (without file extension, although with is probably better - we can always change that)
+ingredients (comma separated)
+
+Old Fashioned
+The Old Fashioned is an excellent drink.
+oldfashioned
+Bourbon or Rye Whiskey,Angostura Bitters,Simple Syrup,Garnished with an orange peel and a cherry
+
+Mojito
+The Mojito is a Cuban classic, and the World's most popular cocktail.
+mojito
+Flor de Cana White Rum,Fresh Mint,Fresh Lime,Sugar,Club Soda,Garnished with a sprig of fresh mint
