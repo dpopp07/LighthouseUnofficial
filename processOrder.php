@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
 	require_once 'connect.php';
 
-	$sql = "INSERT INTO Orders (drinkName, user, confirmed, dateOrdered) VALUES ($drinkName, $user, false, $date";
+	$sql = "INSERT INTO Orders (drinkName, user, confirmed, dateOrdered) VALUES ($drinkName, $user, false, $date)";
 
 	if ($conn->query($sql))
 	{
@@ -33,6 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	else
 	{
 		$result["outcome"] = "A problem occurred while trying to place your order. Please try again.";
+		//$result["outcome"] =  "Error: " . $sql . "<br>" . $conn->error;
 	}
 
 	echo json_encode($result);
