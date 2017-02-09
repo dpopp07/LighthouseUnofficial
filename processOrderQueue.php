@@ -20,10 +20,10 @@ if ($orderList = $conn->query($sql))
 		while ($order = $orderList->fetch_assoc())
 		{
 			$drinkName = $order["drinkName"];
-			$sql = "SELECT ingredients FROM Drinks WHERE drinkName='$drinkName'";
-			if ($ingredRow = $conn->query($sql))
+			$sql = "SELECT ingredients, recipe FROM Drinks WHERE drinkName=\"$drinkName\"";
+			if ($row = $conn->query($sql))
 			{
-				$ingredients = $ingredRow->fetch_assoc();
+				$values = $row->fetch_assoc();
 			}
 			else
 			{
@@ -31,9 +31,10 @@ if ($orderList = $conn->query($sql))
 			}
 
 			$block = $block . "<div class='firstDrinkUp'>";
-			$block = $block . "<p class='bartender'> Drink: " . addQuotes($drinkName) . " </p>";
+			$block = $block . "<p class='bartender'> Drink: " . $drinkName . " </p>";
 			$block = $block . "<p class='bartender'> Customer: " . $order["user"] . " </p>";
-			$block = $block . "<p class='bartender'>" . $ingredients["ingredients"] . "</p>";
+			$block = $block . "<p class='bartender'>" . $values["ingredients"] . "</p>";
+			$block = $block . "<p class='bartender'>" . $values["recipe"] . "</p>";
 			$block = $block . "<p class='bartender'> Order ID: " . $order["orderId"] . " </p>";
 			$block = $block . "<input type='button' name='confirmOrder' value='Confirm' id='" . $order["orderId"] . "'>";
 			$block = $block . "<input type='button' name='cancel' value='Cancel' id='" . $order["orderId"] . "'>";

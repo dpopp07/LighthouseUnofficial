@@ -27,7 +27,7 @@
 			<br>
 			<div id="description" class="manageMenu">
 				Description:<br>
-				<textarea rows="4" cols="50" name="description"></textarea>
+				<textarea rows="4" cols="50" name="description" maxlength="400" ></textarea> <!-- check this before uploading -->
 				<br>
 			</div>
 			<br>

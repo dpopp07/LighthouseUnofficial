@@ -29,7 +29,7 @@ p {
 }
 
 div.sessionMessage {
-	font-size: 22px;
+	font-size:70px;
 	color: rgb(77,40,0);
 	font-weight: bold;
 }
@@ -42,7 +42,16 @@ body.logon {
 
 div.logon {
 	font-family:sans-serif;
-	font-size: 30px;
+	font-size: 110px;
+	color: white;
+	text-align: center;
+	padding: 50px;
+	margin-bottom: 50px;
+}
+
+div.create {
+	font-family:sans-serif;
+	font-size: 90px;
 	color: white;
 	text-align: center;
 	padding: 50px;
@@ -50,9 +59,10 @@ div.logon {
 }
 
 input[type=text], input[type=password] {
-	height: 25px;
-	border-radius: 7px;
-	font-size: 18px;
+	height: 90px;
+	width: 550px;
+	border-radius: 10px;
+	font-size: 70px;
 	margin: 5px;
 }
 
@@ -65,6 +75,7 @@ input[type=submit] {
 	font-variant: small-caps;
 	margin-bottom: 20px;
 	margin-top: 10px;
+	font-size: 50px;
 }
 
 form {
@@ -76,7 +87,7 @@ form {
 
 p.logon {
 	font-family:sans-serif;
-	font-size: 15px;
+	font-size: 30px;
 	color: white;
 	padding: 0px;
 	margin: 0px;
@@ -103,6 +114,7 @@ a.logon {
 p.disclaimer {
 	color: white;
 	text-align: center;
+	font-size: 20px;
 }
 
 /* main menu page */
@@ -110,14 +122,14 @@ p.disclaimer {
 h1 {
 	font-family: sans-serif,'Goudy Old Style';
 	font-weight: bolder;
-	font-size:40px;
+	font-size:110px;
 	/*font-style: italic;*/
 	color: rgb(77, 40, 0);
 }
 
 h2.category {
 	font-family: sans-serif;
-	font-size: 25px;
+	font-size: 75px;
 	text-align: left;
 	font-style: normal;
 	color: rgb(77,40,0);
@@ -129,8 +141,8 @@ h2.category {
 
 img.mainMenu {
 	float:left;
-	width:42px;
-	height:42px;
+	width:142px;
+	height:142px;
 	padding:4px 4px 4px 4px;
 	vertical-align: middle;
 	border-radius: 10px;
@@ -141,8 +153,10 @@ div.mainMenuDiv {
 	border-style: solid;
 	border-color: rgb(77, 40, 0);
 	border-radius: 10px;
-    height: 50px;
-    width: 400px;
+	border-width: 7px;
+    height: 150px;
+    width: 950px;
+   /* width: 400px;*/
     margin-top: 5px;
     margin-bottom: 5px;
     display: inline-block;
@@ -152,10 +166,14 @@ div.mainMenuDiv {
 p.mainMenu {
 	font-family: 'Goudy Old Style', sans-serif;
 	font-weight: bold;
-	font-size:20px;
+	font-size:55px;
 	color: rgb(77, 40, 0);
-	margin: 15px;
+	margin: 40px 40px 10px 40px;
 	padding-left: 50px;
+}
+
+p.previewIngredients {
+	font-size: 25px;
 }
 
 a {
@@ -164,81 +182,114 @@ a {
 
 div.logout, div.reloadMenu {
 	margin: 5px;
-	font-size: 17px;
+	font-size: 60px;
 	color: rgb(77, 40, 0);
 	border-style: solid;
 	border-color: rgb(77, 40, 0);
-	border-radius: 5px;
+	border-radius: 10px;
+	border-width: 7px;
 	display: inline-block;
-	padding: 1px 4px 1px 4px;
-	border-width: 2px;
+	padding: 4px 16px 4px 16px;
 	margin-top: 13px;
 	text-decoration: none;
+	text-align: center;
+}
+
+div.reloadMenu {
+	padding: 4px 8px 4px 8px;
+	font-size: 50px;
+	border-width: 3px;
 }
 
 /* single drink page */
 
+a.reloadMenu {
+	text-decoration: none;
+}
+
 h2.oneDrink {
 	font-family: 'Goudy Old Style', sans-serif;
 	font-weight: bolder;
-	font-size:60px;
+	font-size:95px;
 	font-style: italic;
 	color: rgb(77, 40, 0);
-	width: 250px;
-	height: 150;
-	padding: 0px 0px 0px 0px;
-	/*margin-left: 20px;*/
+	width: 500px;
+	height: 300px;
+	padding: 5px 5px 15px 5px;
+	margin: 0px 0px 0px 0px;
 	text-align: center;
 	display: inline-block;
 	/*background-color:rgb(200, 200, 200);*/
-	margin-top: 10px;
-	margin-left: 20px;
+}
+
+img.oneDrink{
+	float: left;
+	width: 309px;
+	height: 309px;
+	border-radius: 10px;
+	border-style: solid;
+	border-color: rgb(77, 40, 0);
+	border-width: 3px;
+	margin-left: 10px;
 }
 
 p.description {
 	font-family: 'Goudy Old Style', sans-serif;
 	font-weight: bold;
-	font-size:20px;
+	font-size: 40px;
 	color: rgb(77, 40, 0);
 	text-align: left;
 	padding-left: 10px;
-	margin: 20px 0px 30px 0px;
-	width: 440px;
-}
-
-img.oneDrink{
-	float:left;
-	width:150px;
-	height:150px;
-	padding:10px 10px 10px 10px;
-	border-radius: 20px;
-}
-
-ul {
-	font-family: 'Goudy Old Style', sans-serif;
-	font-weight: normal;
-	font-size:17px;
-	color: rgb(77, 40, 0);
+	margin: 30px 10px 30px 0px;
+	width: 900px;
 }
 
 h3 {
 	font-family: 'Goudy Old Style', sans-serif;
 	font-weight: bold;
-	font-size:20px;
+	font-size: 40px;
 	color: rgb(77, 40, 0);
 	text-align: left;
 	padding-left: 10px;
 	margin-top: 20px;
+	margin-left: 10px;
+}
+
+ul {
+	font-family: 'Goudy Old Style', sans-serif;
+	font-weight: normal;
+	font-size: 40px;
+	color: rgb(77, 40, 0);
+	margin-left: 10px;
+}
+
+input[type=button] {
+	-webkit-appearance: none;
+	background-color: white;
+	color: rgb(77, 40, 0);
+	font-family: 'Goudy Old Style', sans-serif;
+	font-size: 45px;
+	padding: 5px 8px 5px 8px;
+	border-style: solid;
+	border-color: rgb(77, 40, 0);
+	border-radius: 10px;
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+div#message {
+	font-size: 35px;
 }
 
 div.reloadMenu {
 	text-decoration: underline;
-	padding:10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+	margin-bottom: 20px;
 }
 
 a.reloadMenu {
 	display: block;
-	width: 153px;
+	width: 421px;
 }
 
 	/* admin pages */
@@ -246,7 +297,7 @@ a.reloadMenu {
 h1.admin {
 	font-family: sans-serif;
 	font-weight: bolder;
-	font-size:30px;
+	font-size:60px;
 	font-style: normal;
 	color: rgb(77, 40, 0);
 	text-align: left;
@@ -255,15 +306,17 @@ h1.admin {
 
 div.admin {
 	color: rgb(77,40,0);
-	font-size: 20px;
+	font-size: 85px;
 	padding:10px 10px 10px 10px;
 	border-color: rgb(77,40,0);
 	border-style: solid;
-	border-radius: 5px;
+	border-radius: 10px;
+	border-width: 7px;
 	text-align: center;
 	vertical-align: middle;
-	width: 190px;
+	width: 490px;
 	cursor: pointer;
+	margin-left: 15px;
 }
 
 /* bartender screen */
@@ -274,9 +327,9 @@ div.firstDrinkUp {
 	border-color: rgb(77, 40, 0);
 	border-radius: 10px;
     height: auto;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -284,9 +337,9 @@ div.firstDrinkUp {
 p.bartender {
 	font-family: sans-serif;
 	font-weight: normal;
-	font-size:15px;
+	font-size:30px;
 	color: rgb(77, 40, 0);
-	margin: 15px;
+	margin: 25px;
 	padding-left: 0px;
 }
 

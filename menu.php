@@ -20,7 +20,7 @@
 	</head>
 	<body id="menu">
 
-		<input type="hidden" id="refresh" value="no"> <!-- for refreshing on back button -->
+		<!-- <input type="hidden" id="refresh" value="no"> --> <!-- for refreshing on back button -->
 
 		<?php welcomeUser(); ?> 
 

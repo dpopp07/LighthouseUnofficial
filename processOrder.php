@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	else
 	{
 		$result["outcome"] = "A problem occurred while trying to place your order. Please try again.";
-		//$result["outcome"] =  "Error: " . $sql . "<br>" . $conn->error;
+		$result["sql_error"] =  "Error: " . $sql . "<br>" . $conn->error;
 	}
 
 	echo json_encode($result);

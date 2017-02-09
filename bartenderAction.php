@@ -39,6 +39,85 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		{
 			$result["outcome"] = "Error: " . $conn->error;
 		}
+
+// ***********************************************************************************************************
+// ********** 		inventory tracker: update the inventory table to account for ordered drink 		**********
+// ***********************************************************************************************************
+
+		$result["id"] = $id;
+		$sql_getOrderedDrinkName = "SELECT drinkName FROM Orders WHERE orderId=$id";
+
+		if ($orderRow = $conn->query($sql_getOrderedDrinkName)->fetch_assoc())
+		{
+			$drinkName = addQuotes($orderRow["drinkName"]);
+			$sql_getIngredientsAndRecipe = "SELECT ingredients, recipe FROM Drinks WHERE drinkName=$drinkName";
+
+			if ($drinkRow = $conn->query($sql_getIngredientsAndRecipe))
+			{
+				$drinkRow = $drinkRow->fetch_assoc();
+
+				$ingredients = $drinkRow["ingredients"];
+				$ingredients = explode(",", $ingredients);
+
+				$recipe = $drinkRow["recipe"];
+				$recipe = explode(",", $recipe);
+
+				if (count($ingredients) != count($recipe))
+				{
+					// throw an error
+					$result["outcome"] = "Error: ingredients and recipe have different number of elements!";
+				}
+				else
+				{
+					for ($i = 0; $i < count($ingredients); $i++)
+					{
+						$ingredient = addQuotes(strtolower($ingredients[$i]));
+						$sql_lookupInventory = "SELECT * FROM Inventory WHERE bottleName=$ingredient";
+
+						if ($inventoryItem = $conn->query($sql_lookupInventory))
+						{
+							if ($inventoryItem->num_rows > 0)
+							{
+								// then we are tracking this ingredient
+								$item = $inventoryItem->fetch_assoc();
+								$newAmount = $item["amountRemaining"] - floatval($recipe[$i]);
+								if ($newAmount < 0.0)
+								{
+									// negative volumes are not real
+									$newAmount = 0.0;
+								}
+								$sql_updateInventory = "UPDATE Inventory SET amountRemaining=$newAmount WHERE bottleName=$ingredient";
+								if ($conn->query($sql_updateInventory))
+								{
+									$result["outcome"] = "Inventory update successful for " . $ingredient;
+								}
+								else
+								{
+									$result["outcome"] = "Error: " . $sql_updateInventory . "   " . $conn->error;
+								}
+							}
+						}
+						else
+						{
+							$result["outcome"] = "Error: " . $sql_lookupInventory . "   " . $conn->error;
+						}
+					}
+				}
+			}
+			else
+			{
+				$result["outcome"] = "Error: " . $sql_getIngredientsAndRecipe . "   " . $conn->error;
+			}
+		}
+		else
+		{
+			$result["outcome"] = "Error: " . $sql_getOrderedDrinkName . "   " . $conn->error;
+		}
+
+// ***********************************************************************************************************
+// ********** 		                          end inventory tracker 		                        **********
+// ***********************************************************************************************************
+
 	}
 	elseif (strcmp($action, "cancel") == 0)
 	{
@@ -56,7 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 		}
 		else
 		{
-			$result["outcome"] = "Error: " . $sql . "<br>" . $conn->error;
+			$result["outcome"] = "Error: " . $sql . "   " . $conn->error;
 		}
 	}
 	// else this form shouldnt have been called!

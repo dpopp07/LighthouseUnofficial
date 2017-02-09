@@ -132,6 +132,21 @@ function backToAdminMenu()
 	}
 }
 
+// remove garnish and add some spaces for previewing ingredients
+function formatPreviewIngredients($ingredients)
+{
+	$result = "";
+
+	foreach ($ingredients as $ingredient)
+	{
+		if (strpos($ingredient, 'arnish') !== false)
+		{
+		    echo 'true';
+		}
+		$result = $result . $ingredient . " ";
+	}
+}
+
 if (!function_exists('boolval'))
 {
 	function boolval($val)

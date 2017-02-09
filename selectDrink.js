@@ -7,9 +7,9 @@ This script now contains the functionality that was in orderDrink.js
 	$(".mainMenuDiv").click(function() {
 		
 		var drinkSelected = this.id;
-		var pic = $(this).children("#pic").attr("src");
-		var description = $(this).children("#description").text();
-		var ingredients = $(this).children("#ingredients").text();
+		var pic           = $(this).children("#pic").attr("src");
+		var description   = $(this).children("#description").text();
+		var ingredients   = $(this).children("#ingredients").text();
 
 		var ingredList = ingredients.split(",");
 		var i;
@@ -28,7 +28,7 @@ This script now contains the functionality that was in orderDrink.js
 			newHtml += "<li>" + ingredList[i] + "</li>";
 		}
 
-		newHtml += "</ul><input type='button' id='placeOrder' name='" + drinkSelected + "' value='Order This Drink'></body>";
+		newHtml += "</ul><input type=\"button\" id=\"placeOrder\" name=\"" + drinkSelected + "\" value=\"Order This Drink\"></body>";
 
 		$("#menu").html(newHtml);
 		$("body").attr("id", "drinkPage");

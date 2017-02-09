@@ -1,5 +1,11 @@
 Development Issue Tracker for Lighthouse Unofficial
 
+My current big issues:
+- *** pressing back button on a single drink page logs out the user ***
+- better look on mobile
+- sometimes usernames populate as blank to the bartender screen
+- bartender page populates eve and dns wrong - quoted drinks !!!!! the issue lies (i think) in processOrderQueue on line 23
+- fix single drink titles layout. see candy cane martini for example 
 
 Quick fixes:
 - print success message when account is created successfully
@@ -10,7 +16,6 @@ Quick fixes:
 - quotes function where applicable
 - standardize all of the fonts
 - capitalize category names in menu
-- fix single drink titles layout. see candy cane martini for example
 
 Ideas:
 - menu interface for std users, can go to about page or drink menu or personal order history, etc
@@ -37,7 +42,11 @@ Issues:
 - users drinkCount variable and their actual amount of orders in the database are unrelated. the programming is correct but this is sketchy
 - users can sort of hop around with the back and forward button. they cant really do anything but they can cause some errors
 - drink count doesnt update well. will probably have to use more php, maybe get rid of the session variable
-- bartender page populates eve and dns wrong - quoted drinks
 
 Major To Dos:
 - finish the 'refresh on back button' functionality -> this could be really bad if page load is slow
+
+
+Notes:
+12/20/16 - Working on the mobile layout. Rather than going with the responsive route, I am shortcutting and enlarging everything directly by a factor of 2.75
+- all whiskey drinks should reflect whiskey type

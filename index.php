@@ -19,20 +19,20 @@ require_once "header.php";
 	</head>
 
 	<body class="logon" id="knock">
-		
-		
 
 		<!-- <input type="hidden" id="refresh" value="no"> --> <!-- for refreshing on back button, this method doesnt work. maybe safari dependent -->
 		
 		<?php
 			// IF USER USES THE 'BACK' BUTTON, IT DOES NOT LOG THEM OUT
 			// ensure logout
-			logout();
+			//logout();
 		?>
 
 		<div class="logon">
 			Knock, Knock
 		</div>
+
+		<br><br><br><br>
 
 		<form method="post" id="login">
 
@@ -41,12 +41,13 @@ require_once "header.php";
 			<input class="logon" type="password" name="password" placeholder="Password..."> <br>
 
 			<!-- <input type="text" name="speakpas" placeholder="? ? ? ? ..."> <br> -->
-
+			<br>
+			
 			<input class="logon" type="submit" value="Knock"> <br>
 
 		</form>
 
-		<br><br>
+		<br><br><br><br>
 		<div class="center">
 			<a class="logon" href="createAccount.php">
 				<p class="logon">Become A Member</p>

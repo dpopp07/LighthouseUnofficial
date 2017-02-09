@@ -27,7 +27,7 @@ require_once "header.php";
 			logout();
 		?>
 
-		<div class="logon">
+		<div class="create">
 			Fill Out The Form Below. <br>You Can Login Once Your Account Is Approved.
 		</div>
 

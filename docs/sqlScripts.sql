@@ -75,7 +75,6 @@ SET admin=true, approved=true
 WHERE name='admin';
 
 -- add a date column for the orders table
-
 ALTER TABLE Orders
 ADD dateOrdered DATE;
 
@@ -88,3 +87,45 @@ SET dateOrdered="2016-08-24";
 SELECT drinkName, dateOrdered
 FROM Orders
 WHERE user=$user;
+
+-- delete a drink from the menu in SQL
+DELETE FROM Drinks
+WHERE drinkName='Dusky Christmas';
+
+-- add the Inventory table
+-- this database is intended to track the remaining amount of bottled ingredients
+--   bottleName (varchar(35))   : unique name of bottle, like "four roses bourbon" or "irish cream liqueur"
+--   amountRemaining (real) : the volume of liquid remaining, in oz
+CREATE TABLE Inventory
+(
+bottleName varchar(35) UNIQUE NOT NULL,
+amountRemaining real NOT NULL
+)
+
+-- put something into Inventory
+INSERT INTO Inventory (
+bottleName,
+amountRemaining
+) VALUES (
+"irish cream liqueur",
+"25.36"
+)
+
+-- add a recipe column to hold amounts (in oz)
+ALTER TABLE Drinks
+ADD recipe varchar(25);
+
+-- add the recipe for honey bee - this will be our test drink
+UPDATE Drinks
+SET recipe="1.5,0.5,0.25"
+WHERE drinkName="Honey Bee";
+
+-- get name of drink associated with an order id
+SELECT drinkName
+FROM Orders
+WHERE orderId=$id;
+
+-- get ingredients and recipe from the orders table
+SELECT 
+FROM Orders
+WHERE orderId=$id;
