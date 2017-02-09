@@ -49,4 +49,5 @@ Major To Dos:
 
 Notes:
 12/20/16 - Working on the mobile layout. Rather than going with the responsive route, I am shortcutting and enlarging everything directly by a factor of 2.75
-- all whiskey drinks should reflect whiskey type
+- all whiskey drinks should reflect whiskey type: fixed
+2/9/17 - confirmed that orderDrink.js was unnecessary. deleted and then ordered drinks and everything was fine

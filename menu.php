@@ -14,7 +14,7 @@
 		      />
 
 		<script src="jquery-3.1.0.min.js"></script>
-		<script src="selectDrink.js"></script>
+		<script src="selectAndOrderDrink.js"></script>
 	<!--  	<script src="refreshOnBack.js"></script>-->
 
 	</head>
