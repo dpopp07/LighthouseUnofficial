@@ -28,9 +28,13 @@
 			<div class='logout'>Logout</div>
 		</a>
 
+		<a href='orderHistoryPage.php'>
+			<div class='logout'>View Order History</div>
+		</a>
+
 		<?php backToAdminMenu(); ?> <!-- gives an option back to the admin menu, only if user is admin -->
 
-		<h1> Classic Cocktails </h1>
+		<h1> Cocktails </h1>
 
 		<?php require_once 'displayMenu.php'; ?>
 	

@@ -1,6 +1,5 @@
 <?php
 require_once 'header.php';
-
 require_once 'connect.php';
 
 // define an ordered array for the drink categories
@@ -26,7 +25,7 @@ foreach ($categories as $category)
 				$drinkHtml = $drinkHtml . "<div class='mainMenuDiv' id=" . addQuotes($drink["drinkName"]) . ">";
 				$drinkHtml = $drinkHtml . "<img class='mainMenu' id='pic' src=" . $pic . ">";
 				$drinkHtml = $drinkHtml . "<p class='mainMenu'>" . $drink["drinkName"] . "</p>";
-				$drinkHtml = $drinkHtml . "<p class='previewIngredients'>" . $drink["ingredients"] . "</p>";
+				//$drinkHtml = $drinkHtml . "<p class='previewIngredients'>" . $drink["ingredients"] . "</p>";
 				$drinkHtml = $drinkHtml . "<div hidden id=description> " . $drink["description"] . " </div>";
 				$drinkHtml = $drinkHtml . "<div hidden id=ingredients> " . $drink["ingredients"] . " </div>";
 				$drinkHtml = $drinkHtml . "</div><br>";
