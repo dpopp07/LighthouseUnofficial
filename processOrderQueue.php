@@ -10,7 +10,7 @@ This script populates the bartender page with orders from the database.
 
 require_once 'connect.php';
 
-$sql = "SELECT * FROM Orders WHERE confirmed=false";
+$sql = "SELECT * FROM Orders WHERE confirmed=false ORDER BY orderId"; // changed to have the drink populate in order
 $block = "";
 
 if ($orderList = $conn->query($sql))

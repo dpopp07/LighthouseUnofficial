@@ -17,13 +17,13 @@ $(document).ready(function () {
 			{
 				if (result.admin)
 				{
-					// go to bartender page
+					// go to admin page
 					window.location = "admin.php";
 				}
 				else
 				{
 					// go to menu page
-					window.location = "menu.php"
+					window.location = "home.php"
 				}
 			}
 			else // login failed

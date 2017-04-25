@@ -3,7 +3,7 @@ require_once 'header.php';
 require_once 'connect.php';
 
 // define an ordered array for the drink categories
-$categories = array("new", "whiskey", "gin", "brandy", "rum", "vodka", "tequila", "special", "seasonal");
+$categories = array("original", "whiskey", "gin", "brandy", "rum", "special", "vodka", "tequila");
 $drinkHtml = "";
 
 foreach ($categories as $category)

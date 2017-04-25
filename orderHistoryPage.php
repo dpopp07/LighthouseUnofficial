@@ -21,13 +21,14 @@
 
 		<?php welcomeUser(); ?> 
 
-		<a href='index.php'>
+		<br><br>
+<!-- 		<a href='index.php'>
 			<div class='logout'>Logout</div>
 		</a>
-
-		<a href='menu.php'>
+ -->
+<!-- 		<a href='menu.php'>
 			<div class='logout'>Main Menu</div>
-		</a>
+		</a> -->
 
 		<?php backToAdminMenu(); ?> <!-- gives an option back to the admin menu, only if user is admin -->
 

@@ -47,5 +47,11 @@
 			Go To Menu
 		</div>
 
+		<br>
+		
+		<div class="admin" id="home">
+			Go To Home Page
+		</div>	
+
 	</body>
 </html>

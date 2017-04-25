@@ -30,7 +30,7 @@ This script now contains the functionality that was in orderDrink.js
 
 		newHtml += "</ul><input type=\"button\" id=\"placeOrder\" name=\"" + drinkSelected + "\" value=\"Order This Drink\"></body>";
 
-		$("#menu").html(newHtml);
+		$("#cocktailmenu").html(newHtml);
 		$("body").attr("id", "drinkPage");
 		$("title").replaceWith("<title>" + drinkSelected + "</title>")
 

@@ -15,22 +15,23 @@
 
 		<script src="jquery-3.1.0.min.js"></script>
 		<script src="selectAndOrderDrink.js"></script>
-	<!--  	<script src="refreshOnBack.js"></script>-->
-
+		<script src="selectPage.js"></script>
+		
 	</head>
-	<body id="menu">
+	<body id="cocktailmenu">
 
 		<!-- <input type="hidden" id="refresh" value="no"> --> <!-- for refreshing on back button -->
 
-		<?php welcomeUser(); ?> 
+		<?php welcomeUser(); ?>
+		<div class='tabs' id='home'> Home </div>
 
-		<a href='index.php'>
+<!-- 		<a href='index.php'>
 			<div class='logout'>Logout</div>
-		</a>
+		</a> -->
 
-		<a href='orderHistoryPage.php'>
+<!-- 		<a href='orderHistoryPage.php'>
 			<div class='logout'>View Order History</div>
-		</a>
+		</a> -->
 
 		<?php backToAdminMenu(); ?> <!-- gives an option back to the admin menu, only if user is admin -->
 

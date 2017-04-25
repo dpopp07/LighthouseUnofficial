@@ -20,7 +20,7 @@ if ($listOfOrders = $conn->query($sql))
 {
 	if ($listOfOrders->num_rows > 0)
 	{
-		$htmlText = $htmlText . "<h1> Drinks I've Ordered: </h1>";
+		$htmlText = $htmlText . "<div class='sessionMessage'> Drinks I've Ordered: </div class='sessionMessage'>";
 		$htmlText = $htmlText . "<ul>";
 
 		while ($uniqueOrder = $listOfOrders->fetch_assoc())
@@ -43,7 +43,7 @@ if ($listOfOrders = $conn->query($sql))
 	}
 	else
 	{
-		$htmlText = $htmlText . "<h1> You have not ordered any drinks. See the menu to place your first! </h1>";
+		$htmlText = $htmlText . "<div class='sessionMessage'> You have not ordered any drinks. See the menu to place your first! </div class='sessionMessage'>";
 	}
 }
 else

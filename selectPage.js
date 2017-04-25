@@ -33,4 +33,10 @@ $(document).ready(function() {
 
 		window.location = "menu.php";
 	});
+
+	// go to home page
+	$("#home").click(function() {
+
+		window.location = "home.php";
+	});
 });
